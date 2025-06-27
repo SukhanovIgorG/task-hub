@@ -2,9 +2,12 @@ import { Pages } from "@/config/pages";
 import type { IMenu } from "@/types/menu.types";
 import {
   CalendarIcon,
+  ChartAreaIcon,
   LayoutGrid,
   MessageCircleIcon,
+  MessageSquareIcon,
   SettingsIcon,
+  UserIcon,
 } from "lucide-react";
 
 export const MAIN_MENU: IMenu[] = [
@@ -21,12 +24,12 @@ export const MAIN_MENU: IMenu[] = [
   {
     label: "Insight",
     href: Pages.INSIGHT,
-    icon: LayoutGrid,
+    icon: ChartAreaIcon,
   },
   {
     label: "Team",
     href: Pages.TEAM,
-    icon: LayoutGrid,
+    icon: UserIcon,
   },
   {
     label: "Schedule",
@@ -36,7 +39,7 @@ export const MAIN_MENU: IMenu[] = [
   {
     label: "Report",
     href: Pages.REPORT,
-    icon: LayoutGrid,
+    icon: MessageSquareIcon,
   },
   {
     label: "Settings",

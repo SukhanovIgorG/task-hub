@@ -1,11 +1,18 @@
+"use client";
+
 import { SidebarHeading } from "./SidebarHeading";
 import { SidebarMenu } from "./SidebarMenu";
 import { SidebarProjects } from "./SidebarProjects";
 import { SidebarProfile } from "./SidebarProfile";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Sidebar() {
   return (
-    <aside className="w-64 bg-gray-100 p-5 h-screen">
+    <aside
+      className="
+      p-5 h-screen bg-white relative
+      dark:bg-neutral-800 dark:text-white"
+    >
       <nav>
         <SidebarHeading title="Account" />
         <SidebarProfile />
@@ -14,6 +21,7 @@ export function Sidebar() {
         <SidebarHeading title="Projects" />
         <SidebarProjects />
       </nav>
+      <ThemeToggle style={{ position: "absolute", bottom: 20, right: 20 }} />
     </aside>
   );
 }

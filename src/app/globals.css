@@ -18,7 +18,7 @@ body {
 
 body {
   color: theme("colors.gray.900");
-  background-color: theme("colors.gray.50");
+  @apply bg-gradient-to-t from-[#F3EEFF] to-[#E4E7F7];
 
   min-width: 320px;
   min-height: 100vh;

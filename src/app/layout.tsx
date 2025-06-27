@@ -2,6 +2,7 @@ import { SITE_NAME } from "@/constants";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
 
 const font = Poppins({
   variable: "--font-poppins",
@@ -14,7 +15,6 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
     shortcut: "/images/logo.png",
     apple: "/images/logo.png",
-
   },
   title: {
     absolute: SITE_NAME,
@@ -29,13 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-
-      <body
-        className={`${font.variable}  antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" suppressHydrationWarning>
+      <Providers>
+        <body className={`${font.variable}  antialiased`}>{children}</body>
+      </Providers>
     </html>
   );
 }

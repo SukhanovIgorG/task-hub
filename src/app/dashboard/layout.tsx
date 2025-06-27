@@ -1,13 +1,11 @@
-import { Sidebar } from "@/components";
+import { PageLayout, Sidebar } from "@/components";
 import type { PropsWithChildren } from "react";
 
-export default function DashboardLayout({
-  children,
-}: PropsWithChildren) {
+export default function DashboardLayout({ children }: PropsWithChildren) {
   return (
-    <div className="flex">
+    <div className="grid grid-cols-[250px_1fr] h-screen">
       <Sidebar />
-      {children}
+      <PageLayout>{children}</PageLayout>
     </div>
   );
 }
