@@ -1,3 +1,9 @@
-export const PageLayout = ({ children }: { children: React.ReactNode }) => {
-  return <main className="p-5">{children}</main>;
+import clsx from "clsx";
+import type { PropsWithChildren } from "react";
+
+export const PageLayout = ({
+  children,
+  ...props
+}: PropsWithChildren & { className?: string }) => {
+  return <main className={clsx("p-4", props.className)}>{children}</main>;
 };

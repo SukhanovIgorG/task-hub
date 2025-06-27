@@ -10,7 +10,7 @@ export function Sidebar() {
   return (
     <aside
       className="
-      p-5 h-screen bg-white relative
+      p-5 h-screen bg-bg-main relative
       dark:bg-neutral-800 dark:text-white"
     >
       <nav>

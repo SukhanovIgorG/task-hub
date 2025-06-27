@@ -30,9 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Providers>
-        <body className={`${font.variable}  antialiased`}>{children}</body>
-      </Providers>
+      <body className={`${font.variable}  antialiased`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
