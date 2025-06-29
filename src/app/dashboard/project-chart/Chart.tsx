@@ -75,10 +75,11 @@ export const Chart = ({ data }: IChartProps) => {
         <Area
           type="monotone"
           dataKey="uv"
-          stroke="#6366F1"
+          stroke="#8884d8"
           strokeWidth={2}
-          fillOpacity={0}
-          fill="url(#colorGradient)"
+          fillOpacity={0.3}
+          fill="#8884d8"
+          // fill="url(#colorGradient)"
         />
       </AreaChart>
     </ResponsiveContainer>

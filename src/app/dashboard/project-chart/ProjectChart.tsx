@@ -32,9 +32,9 @@ export const ProjectChart = () => {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex justify-between items-center relative">
-        <h2>Project Statistic</h2>
+    <div className="flex flex-col h-full gap-2">
+      <div className="flex justify-between items-center relative ">
+        <h2 className="text-xl font-semibold">Project Statistic</h2>
         <button
           onClick={handleClick}
           type="button"
