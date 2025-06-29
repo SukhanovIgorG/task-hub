@@ -1,6 +1,7 @@
 import { Heading, PageLayout, SearchField } from "@/components";
 import { type Metadata } from "next";
 import { ProjectStats } from "./project-stats/ProjectStats";
+import { ProjectChart } from "./project-chart/ProjectChart";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -19,7 +20,9 @@ export default function Dashboard() {
           <div className="col-span-1">
             <ProjectStats />
           </div>
-          <div className="col-span-1 w-full bg-amber-300">2</div>
+          <div className="col-span-1 w-full rounded-lg bg-bg-main p-4">
+            <ProjectChart />
+          </div>
         </div>
       </PageLayout>
       {false && (

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import { Sidebar } from "@/components";
 
 const font = Poppins({
   variable: "--font-poppins",
@@ -30,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${font.variable}  antialiased`}>
+      <body
+        className={`${font.variable}  antialiased grid grid-cols-[250px_1fr] h-screen`}
+      >
+        <Sidebar />
         <Providers>{children}</Providers>
       </body>
     </html>
