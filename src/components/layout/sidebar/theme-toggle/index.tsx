@@ -7,7 +7,7 @@ import { useEffect, useState, type ButtonHTMLAttributes } from "react";
 export const ThemeToggle = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-
+  console.log("mounted :>> ", mounted);
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
@@ -15,7 +15,7 @@ export const ThemeToggle = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="text-gray-500 p-2.5"
+      className="text-gray-500 p-2.5 hover:text-gray-700"
       {...props}
     >
       {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
